@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>JSON for LLM</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell tool-page-shell">
+      <header class="topbar hero-panel">
+        <div class="topbar-main">
+          <div class="title-block">
+            <p id="status-badge" class="status-badge"></p>
+            <div class="title-copy">
+              <h1 id="app-title"></h1>
+              <p id="app-subtitle" class="subtitle"></p>
+            </div>
+          </div>
+
+          <div class="summary-strip">
+            <div class="summary-item">
+              <span id="status-label" class="meta-label"></span>
+              <strong id="status-value" class="summary-value"></strong>
+            </div>
+            <div class="summary-item">
+              <span id="page-context-label" class="meta-label"></span>
+              <strong id="page-context-value" class="summary-value"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-actions utility-actions">
+          <button id="settings-toggle" class="utility-button" type="button"></button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="input-column">
+          <article class="panel selection-panel">
+            <div class="panel-header compact-header">
+              <div class="panel-copy">
+                <h2 id="selection-title"></h2>
+                <p id="selection-hint" class="panel-hint"></p>
+              </div>
+              <div class="panel-toolbar button-group">
+                <button id="use-selection" class="primary-button" type="button"></button>
+                <button id="copy-selection" class="secondary-button" type="button"></button>
+              </div>
+            </div>
+            <div class="editor-shell">
+              <textarea id="selection-input" class="editor"></textarea>
+            </div>
+          </article>
+
+          <article class="panel source-panel">
+            <div class="panel-header compact-header">
+              <div class="panel-copy">
+                <h2 id="source-title"></h2>
+                <p id="source-hint" class="panel-hint"></p>
+              </div>
+              <div class="panel-toolbar button-group">
+                <button id="regenerate-source" class="primary-button" type="button"></button>
+                <button id="copy-source" class="secondary-button" type="button"></button>
+              </div>
+            </div>
+            <div class="editor-shell">
+              <textarea id="source-input" class="editor editor-source"></textarea>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel output-panel feature-panel">
+          <div class="panel-header compact-header">
+            <div class="panel-copy">
+              <h2 id="outputs-title"></h2>
+              <p id="outputs-hint" class="panel-hint"></p>
+            </div>
+            <div class="panel-toolbar result-toolbar">
+              <button id="copy-output" class="secondary-button" type="button"></button>
+            </div>
+          </div>
+          <div class="tab-shell">
+            <div id="tab-list" class="tab-list"></div>
+          </div>
+          <div class="editor-shell">
+            <textarea id="result-output" class="editor editor-result"></textarea>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

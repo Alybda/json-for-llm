@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>JSON for LLM Settings</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell settings-shell">
+      <header class="topbar hero-panel">
+        <div class="title-block">
+          <h1 id="settings-title"></h1>
+          <p id="settings-hint" class="subtitle"></p>
+        </div>
+        <div class="topbar-actions">
+          <button id="open-tool-page" class="secondary-button" type="button"></button>
+          <button id="restore-defaults" class="secondary-button" type="button"></button>
+        </div>
+      </header>
+
+      <main class="settings-layout">
+        <section class="panel settings-main-panel">
+          <div class="settings-section">
+            <h2 id="language-title"></h2>
+            <label class="field-label" for="language-select" id="language-label"></label>
+            <select id="language-select" class="field-input">
+              <option value="zh-CN"></option>
+              <option value="en"></option>
+            </select>
+          </div>
+
+          <div class="settings-section">
+            <h2 id="debug-title"></h2>
+            <p class="panel-hint" id="debug-hint"></p>
+            <label class="checkbox-item" for="debug-enabled">
+              <input id="debug-enabled" type="checkbox" />
+              <span id="debug-enabled-label"></span>
+            </label>
+          </div>
+
+          <div class="settings-section">
+            <h2 id="menu-title"></h2>
+            <p class="panel-hint" id="menu-hint"></p>
+            <div id="menu-toggle-list" class="checkbox-list"></div>
+          </div>
+
+          <div class="settings-section">
+            <h2 id="result-title"></h2>
+            <label class="field-label" for="result-mode" id="result-mode-label"></label>
+            <select id="result-mode" class="field-input">
+              <option value="tool-page"></option>
+            </select>
+            <p class="panel-hint" id="result-mode-hint"></p>
+          </div>
+        </section>
+
+        <aside class="panel sidebar-panel">
+          <div class="settings-section">
+            <h2 id="about-title"></h2>
+            <div class="about-grid">
+              <div class="meta-item">
+                <span class="meta-label" id="version-label"></span>
+                <strong id="version-value"></strong>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label" id="license-label"></span>
+                <strong id="license-value"></strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

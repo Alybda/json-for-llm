@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "JSON for LLM"
+  },
+  "extDescription": {
+    "message": "Expand partial JSON selections in the browser and generate schemas or code models."
+  },
+  "actionTitle": {
+    "message": "Open JSON for LLM"
+  }
+}

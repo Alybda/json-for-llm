@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "JSON for LLM"
+  },
+  "extDescription": {
+    "message": "在浏览器中扩展局部 JSON 选中内容，并生成 Schema 或代码模型。"
+  },
+  "actionTitle": {
+    "message": "打开 JSON for LLM"
+  }
+}
